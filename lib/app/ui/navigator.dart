@@ -1,3 +1,4 @@
+import 'package:chat_app_flutter_ec/data/contacts/domain/domain.dart';
 import 'package:flutter/material.dart';
 
 class AppNavigator {
@@ -8,11 +9,11 @@ class AppNavigator {
   static const ROUTE_ONBOARDING = '/onboarding';
   static const ROUTE_CHAT = '/chat';
 
-  // static void navigateToChat(BuildContext context, Contact contact) {
-  //   Navigator.pushNamed(
-  //     context,
-  //     AppNavigator.ROUTE_CHAT,
-  //     arguments: contact,
-  //   );
-  // }
+  static void navigateToChat(BuildContext context, Contact contact) {
+    Navigator.pushNamed(
+      context,
+      AppNavigator.ROUTE_CHAT,
+      arguments: contact,
+    );
+  }
 }

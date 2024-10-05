@@ -15,7 +15,7 @@ class ChatItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        // AppNavigator.navigateToChat(context, contact);
+        AppNavigator.navigateToChat(context, contact);
       },
       leading: ChatAvatar(
         name: contact.name,

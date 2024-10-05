@@ -1,5 +1,6 @@
 import 'package:chat_app_flutter_ec/app/auth/auth_handler.dart';
 import 'package:chat_app_flutter_ec/app/auth/bloc/auth_bloc.dart';
+import 'package:chat_app_flutter_ec/app/chat/chat.dart';
 import 'package:chat_app_flutter_ec/app/di/di.dart';
 import 'package:chat_app_flutter_ec/app/home/home.dart';
 import 'package:chat_app_flutter_ec/app/onboarding/cubit/onboarding_cubit.dart';
@@ -42,12 +43,10 @@ class App extends StatelessWidget {
                   ),
                   child: const HomePage(),
                 ),
-            // AppNavigator.ROUTE_CHAT: (context) => BlocProvider(
-            //       create: (context) => ChatCubit(
-            //         getIt<MessagesRepository>(),
-            //       ),
-            //       child: const ChatPage(),
-            //     ),
+            AppNavigator.ROUTE_CHAT: (context) => BlocProvider(
+                  create: (context) => ChatBloc(),
+                  child: const ChatPage(),
+                ),
           },
         ),
       ),
