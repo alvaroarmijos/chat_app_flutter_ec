@@ -21,7 +21,6 @@ class MessageItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = mySelf ? AppColors.primary : AppColors.messageGrey;
     final colorText = mySelf ? Colors.white : Colors.black;
-    final textTheme = Theme.of(context).textTheme;
     final dateFormat = DateFormat.jm().format(date);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
